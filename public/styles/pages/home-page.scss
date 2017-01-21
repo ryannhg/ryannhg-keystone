@@ -35,11 +35,16 @@ $break-small: 768px;
 
 .footer {
 
-    .level-left {
-        justify-content: center;
-    }
+    @media screen and (max-width: $break-small) {
 
-    .level-item:not(:last-child) {
-        margin-bottom: 0;
+        .level-left {
+            justify-content: center;
+        }
+
+        .level-item:not(:last-child) {
+            margin-bottom: 0;
+        }
+ 
     }
+    
 }
