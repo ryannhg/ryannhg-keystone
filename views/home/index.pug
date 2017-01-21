@@ -1,0 +1,53 @@
+extends ../layout.pug
+
+block head
+
+	link( rel="stylesheet" href="/styles/pages/home-page.css" )
+
+block content
+
+	// Navbar
+	//- nav.nav.is-transparent
+	//- 	.container
+	//- 		.nav-left
+	//- 			a.nav-item( href="/" alt=app.title )=app.title
+
+	// 'Intro' Section
+	.intro-section.hero.is-dark.is-large.is-bold
+		.hero-body.has-text-centered
+			h1.title.is-1=page.introTitle
+			h2.subtitle.is-3=page.introSubtitle
+
+
+	// 'About Ryan' Section
+	.about-section.hero.is-medium
+		.hero-body
+			.container
+				.columns
+					.column.is-half
+						img.image( src=page.aboutImage.url )
+					.column.is-half.section
+						h3.title.is-3.has-text-centered=page.aboutTitle
+						div.content!=page.aboutContent.html
+
+	// 'Links' Section
+	if page.pageLinks.length !== 0
+		.hero.is-medium.is-dark.has-text-centered
+			.hero-body
+				h3.title.is-3=page.linksTitle
+				each link in page.pageLinks
+					a.tag.is-info.is-large.is-bubbly.is-marginned( href=link.url alt=link.label)=link.label
+
+
+	// Footer
+	nav.hero.is-light.footer
+		.container.is-full-width
+			.level
+				.level-left.is-flex.has-text-centered
+					each link in page.footerLinks
+						.level-item
+							a.icon.is-large.is-bubbly( href=link.url alt=link.label)
+								i.fa( class=link.icon )
+				.level-right
+					.level-item
+						label.label.subtitle.is-4.is-faint=page.footerQuote

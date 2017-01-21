@@ -1,0 +1,45 @@
+$break-small: 768px;
+
+.intro-section {
+
+    .title {
+        font-size: 5rem;
+
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: $break-small) {
+
+        .title {
+            font-size: 2.5rem;
+
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+        }
+
+    }
+}
+
+.about-section {
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+}
+
+.footer {
+
+    .level-left {
+        justify-content: center;
+    }
+
+    .level-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+}

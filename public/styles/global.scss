@@ -1,0 +1,36 @@
+html {
+    overflow: auto;
+    font-family: 'Open Sans';
+}
+
+.title {
+    font-family: 'Raleway';
+}
+
+.is-full-width {
+    width: 100%;
+}
+
+.is-padded {
+    padding: 1.5rem;
+}
+
+.is-marginned {
+    margin: 1.5rem;
+}
+
+.is-faint {
+    opacity: .5;
+}
+
+.is-bubbly {
+
+    transition: transform .3s;
+    transform: scale(1);
+
+    &:hover {
+
+        transform: scale(1.2);
+
+    }
+}
