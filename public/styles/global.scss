@@ -1,10 +1,17 @@
+$break-small: 768px;
+
+
 html {
     overflow: auto;
     font-family: 'Open Sans';
 }
 
+body {
+    font-size: 20px;
+}
+
 .title {
-    font-family: 'Raleway';
+    font-family: 'Montserrat';
 }
 
 .is-full-width {
@@ -12,11 +19,11 @@ html {
 }
 
 .is-padded {
-    padding: 1.5rem;
+    padding: 20px;
 }
 
 .is-marginned {
-    margin: 1.5rem;
+    margin: 10px;
 }
 
 .is-faint {
@@ -33,4 +40,39 @@ html {
         transform: scale(1.2);
 
     }
+}
+
+.is-transparent-nav {
+    width: 100%;
+    top: 0;
+    background: #333;
+
+    a.title {
+        color: white;
+    }
+
+}
+
+.content {
+    h1,h2,h3 {
+        font-family: 'Montserrat';
+    }
+}
+
+.footer {
+
+    padding: 3rem 20px;
+
+    @media screen and (max-width: $break-small) {
+
+        .level-left {
+            justify-content: center;
+        }
+
+        .level-item:not(:last-child) {
+            margin-bottom: 0;
+        }
+ 
+    }
+    
 }

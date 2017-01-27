@@ -6,12 +6,6 @@ block head
 
 block content
 
-	// Navbar
-	//- nav.nav.is-transparent
-	//- 	.container
-	//- 		.nav-left
-	//- 			a.nav-item( href="/" alt=app.title )=app.title
-
 	// 'Intro' Section
 	.intro-section.hero.is-dark.is-large.is-bold
 		.hero-body.has-text-centered
@@ -37,17 +31,3 @@ block content
 				h3.title.is-3=page.linksTitle
 				each link in page.pageLinks
 					a.tag.is-info.is-large.is-bubbly.is-marginned( href=link.url alt=link.label)=link.label
-
-
-	// Footer
-	nav.hero.is-light.footer
-		.container.is-full-width
-			.level
-				.level-left.is-flex.has-text-centered
-					each link in page.footerLinks
-						.level-item
-							a.icon.is-large.is-bubbly( href=link.url alt=link.label)
-								i.fa( class=link.icon )
-				.level-right
-					.level-item
-						label.label.subtitle.is-4.is-faint=page.footerQuote

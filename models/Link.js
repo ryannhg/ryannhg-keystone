@@ -15,7 +15,7 @@ Link.add(
             initial: true
         },
         url: {
-            type: Types.Url,
+            type: Types.Text,
             required: true,
             initial: true
         },

@@ -1,0 +1,15 @@
+nav.nav.has-shadow
+	.container
+		.nav-left.is-flex
+			a.nav-item.title.is-4( 
+				href="/" 
+				alt="Go home" 
+				style="margin: 0; position: absolute; height: 50px; z-index: 2;" 
+			)
+				i.fa.fa-chevron-left
+				span=""
+
+			.nav-item.title.is-4.has-text-centered( 
+				alt=app.title 
+				style="justify-content: center; flex: 1; position: absolute; width: 100%; height: 50px; z-index: 1;" 
+			)=app.title

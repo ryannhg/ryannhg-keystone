@@ -1,0 +1,16 @@
+extends ../layout.pug
+
+block head
+
+	link( rel="stylesheet" href="/styles/pages/blog-post-page.css" )
+
+block content
+
+	.hero.is-medium.is-primary.is-bold( style="background: url(" + page.heroImage.url + "); background-position: center; background-size: cover;")
+		.hero-body.has-text-centered( style="background: rgba(0,0,0,.7)" )
+			.container
+				h1.title.is-1=page.title
+				h3.subtitle.is-3=page.subtitle
+
+	.container.section
+		.content!=page.body.html

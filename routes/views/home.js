@@ -7,6 +7,8 @@ exports = module.exports = function(req, res) {
     var view = new keystone.View(req, res);
     var locals = res.locals;
 
+    locals.app.showNavbar = false;
+
     getHomepage()
     .then(function(homePages) {
 

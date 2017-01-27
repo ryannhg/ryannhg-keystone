@@ -1,4 +1,4 @@
-var keystone = require('keystone');
+var keystone = require('keystone'),
 	Types = keystone.Field.Types;
 
 var HomePage = new keystone.List('HomePage', {
@@ -37,7 +37,8 @@ HomePage.add(
 			required: true
 		},
 		aboutContent: {
-			type: Types.Markdown
+			type: Types.Markdown,
+			height: 200
 		},
 		aboutImage: {
 			type: Types.CloudinaryImage
@@ -52,20 +53,6 @@ HomePage.add(
 			required: true
 		},
 		pageLinks: {
-			type: Types.Relationship,
-			ref: 'Link',
-			many: true
-		}
-	},
-
-	'Footer',
-	{
-		footerQuote: {
-			type: Types.Text,
-			default: 'Stalking is cool!',
-			required: true
-		},
-		footerLinks: {
 			type: Types.Relationship,
 			ref: 'Link',
 			many: true

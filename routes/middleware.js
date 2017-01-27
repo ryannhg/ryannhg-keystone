@@ -1,23 +1,56 @@
-var keystone = require('keystone');
- 
-/**
-    Initialises the standard view locals.
-    Include anything that should be initialised before route controllers are executed.
-*/
+var keystone = require('keystone'),    
+    Footer = keystone.list('Footer');
+
 exports.initLocals = function(req, res, next) {
     
     var locals = res.locals;
     
-    locals.app = {
+    getFooter().then(function(footer){
 
-    	title: 'RyanNHG',
-    	production: keystone.get('env') === 'production',
-        showNavbar: true
+        locals.app = {
 
-    };
-    
-    // Add your own local variables here
-    
-    next();
+            title: 'RyanNHG',
+            production: keystone.get('env') === 'production',
+            showNavbar: true,
+            showFooter: true,
+            footer: footer
+
+        };
+        
+        
+        next();
+
+    })
+
     
 };
+
+function getFooter() {
+
+    return new Promise(function(resolve, reject){
+
+        Footer.model
+            .find()
+            .limit(1)
+            .populate('links')
+            .exec()
+            .then(function(footers) {
+
+                if(footers == undefined || footers.length === 0) {
+
+                    console.log('Using default footer');
+
+                    resolve(new Footer.model());
+
+                } else {
+
+                    resolve(footers[0]);
+
+                }
+
+            })
+            .catch(reject);
+
+    });
+
+}

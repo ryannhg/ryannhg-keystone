@@ -1,0 +1,11 @@
+nav.hero.is-light.footer
+	.container.is-full-width
+		.level
+			.level-left.is-flex.has-text-centered
+				each link in app.footer.links
+					.level-item
+						a.icon.is-large.is-bubbly( href=link.url alt=link.label)
+							i.fa( class=link.icon )
+			.level-right
+				.level-item
+					label.label.subtitle.is-4=app.footer.quote

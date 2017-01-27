@@ -32,19 +32,3 @@ $break-small: 768px;
     }
 
 }
-
-.footer {
-
-    @media screen and (max-width: $break-small) {
-
-        .level-left {
-            justify-content: center;
-        }
-
-        .level-item:not(:last-child) {
-            margin-bottom: 0;
-        }
- 
-    }
-    
-}
