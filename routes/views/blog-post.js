@@ -38,6 +38,7 @@ function getBlogPost(blogPost) {
     return BlogPost.model
         .find({ key: blogPost })
         .limit(1)
+        .populate('tags')
         .exec();
 
 }

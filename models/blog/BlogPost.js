@@ -36,6 +36,11 @@ BlogPost.add(
 		body: {
 			type: Types.Markdown,
 			height: 500
+		},
+		tags: {
+			type: Types.Relationship,
+			ref: 'Tag',
+			many: true
 		}
 	}
 

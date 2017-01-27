@@ -66,6 +66,10 @@ keystone.set('nav', {
 	pages: [
 		'HomePage'
 	],
+	blog: [
+		'BlogPost',
+		'Tag'
+	],
 	users: 'User',
 	links: 'Link',
 });
