@@ -1,10 +1,11 @@
-var keystone = require('keystone'),    
+var keystone = require('keystone'),
+    md = require('markdown-it')(),
     Footer = keystone.list('Footer');
 
 exports.initLocals = function(req, res, next) {
     
     var locals = res.locals;
-    
+
     getFooter().then(function(footer){
 
         locals.app = {
@@ -13,10 +14,10 @@ exports.initLocals = function(req, res, next) {
             production: keystone.get('env') === 'production',
             showNavbar: true,
             showFooter: true,
-            footer: footer
+            footer: footer,
+            markdown: md
 
         };
-        
         
         next();
 

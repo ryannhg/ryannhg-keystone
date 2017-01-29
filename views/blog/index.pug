@@ -13,4 +13,4 @@ block content
 				h3.subtitle.is-3=page.subtitle
 
 	.container.section
-		.content!=page.body.html
+		.content!=app.markdown.render(page.body.md)
