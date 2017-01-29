@@ -29,7 +29,7 @@ __Optional Configuration__
 1. Copy `example.env` into a new file called `.env` for any environment variables you'll need.
     - `NODE_ENV` - Used to set production mode (defaults to `development`)
     - `PORT` - Specifies the port to run the site on (defaults to `1234`)
-    - `MONGO_URI` - Connection string to database (defaults to `mongodb://192.168.99.100/mma-regional`, which is Docker's IP )
+    - `MONGO_URI` - Connection string to database (defaults to `mongodb://localhost/ryannhg`, which is Docker's IP )
     - `CLOUDINARY_URL` - Access to Cloudinary Image Service (defaults to `cloudinary://api_key:api_secret@cloud_name`)
     - `COOKIE_SECRET` - Secret used for encryption (defaults to `cookie-secret`)
 
