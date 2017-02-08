@@ -7,7 +7,7 @@ keystone.pre('routes', middleware.initLocals);
 
 // Handle 404 errors
 keystone.set('404', function(req, res, next) {
-	res.notfound();
+	res.err('Page not found.');
 });
 
 // Handle other errors

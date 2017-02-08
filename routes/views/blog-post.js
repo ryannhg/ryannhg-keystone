@@ -9,12 +9,13 @@ exports = module.exports = function(req, res) {
 
     locals.app.title = locals.app.title + ' | Blog';
 
-    getBlogPost(req.blogPost)
+
+    getBlogPost(req.params.blogPost)
     .then(function(blogPosts) {
 
         if(blogPosts == undefined || blogPosts.length === 0) {
 
-            console.info('Blog post "' + req.blogPost + '" not found, redirecting to homepage.');
+            console.info('Blog post "' + req.params.blogPost + '" not found, redirecting to homepage.');
 
             res.redirect('/');
 
@@ -36,7 +37,7 @@ exports = module.exports = function(req, res) {
 function getBlogPost(blogPost) {
 
     return BlogPost.model
-        .find({ key: blogPost })
+        .find({ slug: blogPost })
         .limit(1)
         .populate('tags')
         .exec();

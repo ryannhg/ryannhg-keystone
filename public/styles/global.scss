@@ -10,18 +10,30 @@ body {
     font-size: 20px;
 }
 
-code .tag {
-    align-items: initial;
-    border-radius: initial;
-    color: initial;
-    display: initial;
-    font-size: initial;
-    height: initial;
-    justify-content: initial;
-    line-height: initial;
-    background: initial;
-    vertical-align: initial;
-    padding: initial;
+code {
+    .tag {
+        align-items: initial;
+        border-radius: initial;
+        color: initial;
+        display: initial;
+        font-size: initial;
+        height: initial;
+        justify-content: initial;
+        line-height: initial;
+        background: initial;
+        vertical-align: initial;
+        padding: initial;
+    }
+
+    .number {
+        background: initial;
+        padding: initial;
+        margin: initial;
+        display: initial;
+        height: initial;
+        font-size: initial;
+        border: initial;
+    }
 }
 
 .title {
