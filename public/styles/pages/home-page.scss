@@ -4,7 +4,6 @@ $break-small: 768px;
 
     .title {
         font-size: 5rem;
-
     }
 
     .subtitle {
@@ -23,6 +22,16 @@ $break-small: 768px;
         }
 
     }
+}
+
+.featured-posts {
+
+    .card:hover {
+
+        box-shadow: rgba(10,10,10,.5) 0 8px 16px;
+
+    }
+
 }
 
 .about-section {

@@ -38,7 +38,7 @@ function getHomepage() {
     return HomePage.model
         .find()
         .limit(1)
-        .populate('pageLinks footerLinks')
+        .populate('featuredPosts pageLinks footerLinks')
         .exec();
 
 }

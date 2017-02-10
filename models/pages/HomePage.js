@@ -45,6 +45,15 @@ HomePage.add(
 		}
 	},
 
+	'Blog Posts',
+	{
+		featuredPosts: {
+			type: Types.Relationship,
+			ref: 'BlogPost',
+			many: true
+		}
+	},
+
 	'Links Section',
 	{
 		linksTitle: {

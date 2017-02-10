@@ -24,6 +24,28 @@ block content
 						h3.title.is-3.has-text-centered=page.aboutTitle
 						div.content!=page.aboutContent.html
 
+
+	// 'Blog Posts' Section
+	if page.featuredPosts.length !== 0
+		.hero.is-medium.has-text-centered.is-dark.featured-posts
+			.hero-body
+
+				h3.title.is-3='Featured Blog Posts'
+
+				.columns: each post in page.featuredPosts
+					.column
+						a( href=('/blog/' + post.slug) alt=post.title)
+
+							.card
+
+								.card-image
+									figure.image.is-4by3
+										img( src=post.heroImage.url alt=post.title )
+
+								.card-content
+									h1.title.is-4( style="color: black")=post.title
+
+
 	// 'Links' Section
 	if page.pageLinks.length !== 0
 		.hero.is-medium.is-dark.has-text-centered
@@ -31,3 +53,5 @@ block content
 				h3.title.is-3=page.linksTitle
 				each link in page.pageLinks
 					a.tag.is-info.is-large.is-bubbly.is-marginned( href=link.url alt=link.label)=link.label
+
+
